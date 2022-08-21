@@ -1,0 +1,237 @@
+//Primary
+
+$Gradient: hsl(6, 100%, 80%);
+$Gradient-1: hsl(335, 100%, 65%);
+
+//Neutral
+
+$Pale-Blue: hsl(243, 100%, 93%);
+$Grayish-Blue: hsl(229, 7%, 55%);
+$Dark-Blue: hsl(228, 56%, 26%);
+$Very-Dark-Blue: hsl(229, 57%, 11%);
+
+
+
+@mixin centralizar {
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+}
+
+
+@keyframes carregamento {
+      0%{
+        width: 81.5%;
+      }
+
+      25%{
+        width: 90%;
+      }
+
+      50%{
+        width: 95%;
+      } 
+      
+      75%{
+        width: 98%;
+      }
+      100%{
+        width: 100%;
+      }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body {
+    overflow: hidden;
+   }
+
+body{
+    background: url(../images/bg-desktop.png) bottom no-repeat;
+    background-color: $Very-Dark-Blue;
+    background-size: contain;
+    width: 100%;
+    min-height: 100vh;
+    @include centralizar();
+        main{
+            width: 65%;
+            height: 146px;
+            display: flex;
+                .card-left{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 23px;
+                    background-color: $Dark-Blue;
+                    border-radius: 10px 100px 10px 10px;
+                    width: 314px;
+                    height: 172px;
+                        .logo{
+                            width: 152px;
+                            padding: 13px;
+                            margin-bottom: 20px;
+                        }
+                        ul{
+                            list-style: none;
+                            display: flex;
+                            width: 182px;
+                            justify-content: space-around;
+                                li{
+                                    padding: 10px;
+                                    background-color: $Very-Dark-Blue;
+                                    border-radius: 7px;
+                                    display: flex;
+                                    align-items: center;
+                                    cursor: pointer;
+                                        &:hover{
+                                            background-color: $Pale-Blue;
+                                            transition: 2s;
+                                            transform: scale(1.2);
+                                        }
+                                }
+                        }
+                      }
+                .card-right{
+                     width: 100%;
+                     height: 172px;
+                     display: flex;
+                     justify-content: center;
+                     align-items: flex-end;
+                     position: relative;   
+                        .main-text{
+                            position: absolute;
+                            top: 2px;
+                            right: 67px;
+                            background-color: $Pale-Blue;
+                            width: 200px;
+                            line-height: 59px;
+                            font-size: 10px;
+                            text-align: center;
+                            border-radius: 10px 10px 1px 10px;
+                            font-size: 13px;
+                            font-weight: 400;
+                            color: $Grayish-Blue;
+                                .valor-2{
+                                    font-size: 43px;
+                                    color: $Very-Dark-Blue;
+                                    font-weight: 700;
+                                }
+                                &::after{
+                                    content: "";
+                                    border-top: 20px $Pale-Blue solid;
+                                    border-right: 20px  $Pale-Blue solid;
+                                    border-bottom: 20px transparent solid;
+                                    border-left: 20px transparent solid;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 40px;
+                                }
+                            
+                        }
+                        .card-right-central{
+                            width: 624px;
+                            background-color: $Dark-Blue;
+                            border-radius: 5px;
+                            height: 135px;
+                            padding: 29px;
+                                .header-upload{
+                                 .top-text{
+                                    color: $Grayish-Blue;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    margin-bottom: 10px;
+                                        .valor-1{
+                                            color: $Pale-Blue;
+                                            font-size: 16px;
+                                            font-weight: 400;
+                                        }
+                                }   } 
+                                .middle-upload{
+                                    display: flex;
+                                    margin-bottom: 7px;
+                            
+                                        .barra{
+                                            width: 100%;
+                                            height: 20px;
+                                            background-color: $Very-Dark-Blue;
+                                            border-radius: 25px;
+                                                .barra-input{
+                                                    background: rgb(255,163,153);
+                                                    background: linear-gradient(90deg, rgba(255,163,153,1) 0%, rgba(255,77,151,1) 100%);
+                                                    height: 16px;
+                                                    width: 81.5%;
+                                                    border-radius: 25px;
+                                                    margin-top: 2px;
+                                                    position: relative;
+                                                    animation:  carregamento 7s infinite ease-in-out;
+                                                        &::after{
+                                                            content: "";
+                                                            background-color: white;
+                                                            position: absolute;
+                                                            top: 0;
+                                                            right: 0;
+                                                            width: 16px;
+                                                            height: 16px;
+                                                            border-radius: 50%;
+                                                        }
+
+                                                }
+                                        }
+                                }
+                                .down-upload{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 1045px;
+                                    color: $Pale-Blue;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                }
+                        }
+    
+        }
+ }
+@media (max-width:400px){
+ background: url(../images/bg-mobile.png) bottom no-repeat;
+ background-size: cover;
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 330px;
+            .card-left{
+                margin-bottom: 10px;
+            }
+            .card-right{
+                .card-right-central{
+                    width: 315px;
+                    height: 168px;
+                           .header-upload{
+                            .top-text{
+                                font-size: 15px;
+                            }
+                           }
+                           .main-text{
+                            top: 135px;
+                            right: 25px;
+                            border-radius: 15px;
+                                &::after{
+                                    border:none;
+                                }
+                        }
+                        .down-upload{
+                            justify-content: flex-end;
+                            width: 260px;
+                            .inicial{
+                                justify-content: flex-start;
+                                width: 205px;  
+                            }
+                        }
+                }
+            }
+    }
+}
+}
