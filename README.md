@@ -32,8 +32,8 @@ Desktop design
 
 ### Links
 
-- Solution URL: [Fylo data storage component solution]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [Fylo data storage component solution](https://www.frontendmentor.io/solutions/fylo-data-storage-component-solution-AdLdP4NX5X)
+- Live Site URL: [Add live site URL here](https://jpbyte.github.io/fylo-data-storage-component-master/)
 
 ## My process
 
