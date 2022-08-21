@@ -32,8 +32,8 @@ Desktop design
 
 ### Links
 
-- Solution URL: [Fylo data storage component solution](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Fylo data storage component solution]()
+- Live Site URL: [Add live site URL here]()
 
 ## My process
 
